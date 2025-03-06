@@ -31,3 +31,5 @@ Created a blue print of the project.
 **06-03-2025**
 - Completed 70% of React Training in cornerstone
 - Started to work on SpringBoot and added empty java files into repo
+- Completed the course started to build the end points
+
