@@ -1,1 +1,33 @@
-# HomeDecor
+**05-03-2025**
+
+## React Overview
+
+React is a JavaScript library for building user interfaces, developed by Facebook. It allows developers to create reusable UI components and efficiently update the DOM.
+
+### Key Features:
+- **Component-Based**: Build encapsulated components that manage their state.
+- **Virtual DOM**: Efficiently updates and renders UI changes.
+- **JSX**: A syntax extension that combines JavaScript and HTML.
+- **State & Props**: Manage component data dynamically.
+
+## Learning Resources
+- **W3Schools React Tutorial** – A beginner-friendly guide covering React basics, hooks, state management, and more.
+
+## Getting Started with React
+To start a new React project, use the following commands:
+
+```sh
+npx create-react-app my-app
+cd my-app
+npm start
+```
+
+---
+
+## Progress Update
+Completed 30% of  Cornerstone react training.
+Created a blue print of the project.
+
+**06-03-2025**
+- Completed 70% of React Training in cornerstone
+- Started to work on SpringBoot and added empty java files into repo
