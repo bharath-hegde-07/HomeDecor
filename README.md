@@ -37,3 +37,7 @@ Created a blue print of the project.
 - Implemented admin and user end points 
 - Tested end point using postman
 
+**07-03-2025**
+- User register end point is created 
+- Currently working on securing end points
+- Learning how to implement JWT tokens
