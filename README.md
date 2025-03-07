@@ -41,3 +41,7 @@ Created a blue print of the project.
 - User register end point is created 
 - Currently working on securing end points
 - Learning how to implement JWT tokens
+- Got stuck in implementing Spring Security 
+- Started to work on other end points 
+  
+
