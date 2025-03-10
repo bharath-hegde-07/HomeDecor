@@ -48,4 +48,6 @@ Created a blue print of the project.
 - Working on add to cart and few other end points
 - Started with front end part 
 - Planning and designing web pages 
-
+- Working on UI part
+- Created home and login pages
+  
