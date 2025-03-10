@@ -43,5 +43,9 @@ Created a blue print of the project.
 - Learning how to implement JWT tokens
 - Got stuck in implementing Spring Security 
 - Started to work on other end points 
-  
+
+**10-03-2025**
+- Working on add to cart and few other end points
+- Started with front end part 
+- Planning and designing web pages 
 
