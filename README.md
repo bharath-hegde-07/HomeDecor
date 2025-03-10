@@ -50,4 +50,6 @@ Created a blue print of the project.
 - Planning and designing web pages 
 - Working on UI part
 - Created home and login pages
+- Created user register and login pages 
+- Learnt about axios
   
