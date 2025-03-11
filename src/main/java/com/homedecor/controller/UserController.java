@@ -27,11 +27,22 @@ public class UserController {
     private CartService cartService;
 
     @PostMapping("/login")
-    public Map<String, String> userLogin(@RequestBody Map<String, String> loginRequest) {
+    public ResponseEntity<Map<String, Object>> userLogin(@RequestBody Map<String, String> loginRequest) {
         String username = loginRequest.get("username");
         String password = loginRequest.get("password");
 
-        return userService.loginUser(username, password);
+        Map<String, String> loginResponse = userService.loginUser(username, password);
+
+        Map<String, Object> response = new HashMap<>();
+        response.put("message", loginResponse.get("message"));
+
+        if (loginResponse.containsKey("userId")) {  // Ensure userId is returned
+            response.put("userId", Long.parseLong(loginResponse.get("userId")));
+            response.put("role", loginResponse.get("role"));
+            return ResponseEntity.ok(response);
+        } else {
+            return ResponseEntity.status(401).body(response);
+        }
     }
 
     @PostMapping("/add-to-cart")
@@ -54,6 +65,7 @@ public class UserController {
         response.put("message", "Purchase successful.");
         return response;
     }
+
     @PostMapping("/register")
     public ResponseEntity<String> registerUser(@RequestBody User user) {
         Optional<User> existingUser = userRepository.findByEmail(user.getEmail());

@@ -29,7 +29,7 @@ public class UserService {
             return response;
         }
 
-        if (!password.matches(user.getPassword())) {
+        if (!user.getPassword().equals(password)) {
             int attempts = user.getLoginAttempts() + 1;
             user.setLoginAttempts(attempts);
 
@@ -50,6 +50,7 @@ public class UserService {
         userRepository.save(user);
 
         response.put("message", "Login successful");
+        response.put("userId", String.valueOf(user.getId()));
         response.put("role", user.getRole());
         return response;
 
