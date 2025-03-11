@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .main-content {
+    flex: 1;
+  }
+  
+  .footer {
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+    padding: 10px 0;
+    margin-top: auto; /* Push footer to the bottom */
+    position: fixed; /* Fix it at the bottom */
+    bottom: 0; /* Attach to bottom */
+    width: 100%; /* Full width */
+  }
