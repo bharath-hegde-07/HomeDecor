@@ -12,15 +12,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/user")
 public class UserController {
 
-    private final UserRepository userRepository;
+    @Autowired
+    private UserRepository userRepository;
 
-    public UserController(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
     @Autowired
     private UserService userService;
 
@@ -32,11 +31,7 @@ public class UserController {
         String username = loginRequest.get("username");
         String password = loginRequest.get("password");
 
-        String response = userService.loginUser(username, password);
-        Map<String, String> result = new HashMap<>();
-        result.put("message", response);
-
-        return result;
+        return userService.loginUser(username, password);
     }
 
     @PostMapping("/add-to-cart")

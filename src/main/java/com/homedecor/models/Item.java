@@ -13,7 +13,7 @@ public class Item {
     private String description;
     private double price;
     private int stockQuantity;
-
+    private String imageUrl;
     // Getters and Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
@@ -29,4 +29,7 @@ public class Item {
 
     public int getStockQuantity() { return stockQuantity; }
     public void setStockQuantity(int stockQuantity) { this.stockQuantity = stockQuantity; }
+
+    public String getImageUrl() { return imageUrl; }
+    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
 }

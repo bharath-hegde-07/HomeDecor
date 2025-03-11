@@ -25,11 +25,7 @@ public class AdminController {
         String username = loginRequest.get("username");
         String password = loginRequest.get("password");
 
-        String response = userService.loginUser(username, password);
-        Map<String, String> result = new HashMap<>();
-        result.put("message", response);
-
-        return result;
+        return userService.loginUser(username, password);
     }
 
     @PostMapping("/unblock")

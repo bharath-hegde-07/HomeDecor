@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class UserService {
@@ -14,15 +16,17 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public String loginUser(String username, String password) {
+    public Map<String, String> loginUser(String username, String password) {
+        Map<String, String> response = new HashMap<>();
         User user = userRepository.findByUsername(username);
-
         if (user == null) {
-            return "User not found!";
+            response.put("message", "User not found!");
+            return response;
         }
 
         if (user.isBlocked()) {
-            return "User is blocked. Contact Admin to unblock.";
+            response.put("message", "User is blocked. Contact Admin to unblock.");
+            return response;
         }
 
         if (!password.matches(user.getPassword())) {
@@ -32,18 +36,23 @@ public class UserService {
             if (attempts >= 3) {
                 user.setBlocked(true);
                 userRepository.save(user);
-                return "User is blocked due to multiple failed attempts!";
+                response.put("message", "User is blocked due to multiple failed attempts!");
+                return response;
             }
 
             userRepository.save(user);
-            return "Invalid password! Attempts left: " + (3 - attempts);
+            response.put("message", "Invalid password! Attempts left: " + (3 - attempts));
+            return response;
         }
 
         // Reset login attempts on successful login
         user.setLoginAttempts(0);
         userRepository.save(user);
 
-        return "Login successful!";
+        response.put("message", "Login successful");
+        response.put("role", user.getRole());
+        return response;
+
     }
 
     public void unblockUser(String username) {
