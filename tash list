@@ -1,0 +1,18 @@
+[33ma2fec57[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: commit: Added react files
+[33mb72656b[m HEAD@{1}: reset: moving to origin/main
+[33m88d3cb5[m HEAD@{2}: commit: Front end files are added
+[33m4191b37[m HEAD@{3}: commit: Updated user service
+[33m19b9bcd[m HEAD@{4}: commit: Updated user repo
+[33mb18d3a0[m HEAD@{5}: commit: Added new end points
+[33m9db6ea4[m HEAD@{6}: commit: Added new end points
+[33md03d6a7[m HEAD@{7}: pull origin main --rebase (finish): returning to refs/heads/main
+[33md03d6a7[m HEAD@{8}: pull origin main --rebase (pick): Updated endpoints Admin and user
+[33m199e171[m HEAD@{9}: pull origin main --rebase (start): checkout 199e171aa1030efbfd4b4bbc507cd4de18149d62
+[33m3495d51[m HEAD@{10}: commit (amend): Updated endpoints Admin and user
+[33m6f219a7[m HEAD@{11}: commit: Updated endpoints Admin and user
+[33m1644d38[m HEAD@{12}: pull --rebase origin main (finish): returning to refs/heads/main
+[33m1644d38[m HEAD@{13}: pull --rebase origin main (pick): Adding empty folders
+[33me8400f2[m HEAD@{14}: pull --rebase origin main (start): checkout e8400f2b6b2410aa8600569a2b2e81c285f613fb
+[33mdac7ba9[m HEAD@{15}: commit (merge): Adding empty files
+[33mb5f3ada[m HEAD@{16}: Branch: renamed refs/heads/master to refs/heads/main
+[33mb5f3ada[m HEAD@{18}: commit (initial): Adding empty folders

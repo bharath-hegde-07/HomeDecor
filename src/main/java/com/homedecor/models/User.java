@@ -13,6 +13,8 @@ public class User {
     @Column(unique = true, nullable = false)
     private String username;
 
+    private String email;
+
     @Column(nullable = false)
     private String password;
 
@@ -43,4 +45,12 @@ public class User {
 
     public boolean isBlocked() { return blocked; }
     public void setBlocked(boolean blocked) { this.blocked = blocked; }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }

@@ -3,17 +3,16 @@ package com.homedecor.services;
 import com.homedecor.models.User;
 import com.homedecor.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class UserService {
 
     @Autowired
     private UserRepository userRepository;
-
-    @Autowired
-    private BCryptPasswordEncoder passwordEncoder;
 
     public String loginUser(String username, String password) {
         User user = userRepository.findByUsername(username);
@@ -26,7 +25,7 @@ public class UserService {
             return "User is blocked. Contact Admin to unblock.";
         }
 
-        if (!passwordEncoder.matches(password, user.getPassword())) {
+        if (!password.matches(user.getPassword())) {
             int attempts = user.getLoginAttempts() + 1;
             user.setLoginAttempts(attempts);
 
@@ -54,5 +53,15 @@ public class UserService {
             user.setLoginAttempts(0);
             userRepository.save(user);
         }
+    }
+
+    public User registerUser(User user) {
+        user.setPassword(user.getPassword());
+        user.setRole("ROLE_USER");
+        return userRepository.save(user);
+    }
+
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
     }
 }
