@@ -51,3 +51,9 @@ Created a blue print of the project.
 - Working on UI part
 - Created home and login pages
   
+**11-03-2025**
+- Worked on login page functionality
+- Successfully registered user 
+- Implemented login functionality
+- Worked on User dashboard page
+- Implemented add to cart and view cart funcationality
