@@ -67,4 +67,5 @@ Created a blue print of the project.
 
 **13-03-2025**
 - Working on documentation
-- Created ER diagram and workflow diagram
+- Created ER and workflow diagrams
+- Created the documentation of the project 
