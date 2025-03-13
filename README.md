@@ -56,4 +56,15 @@ Created a blue print of the project.
 - Successfully registered user 
 - Implemented login functionality
 - Worked on User dashboard page
-- Implemented add to cart and view cart funcationality
+- Implemented add to cart and view cart funcationalites
+
+**12-03-2025**
+- Worked on admin dashboard UI and Funcutionalities
+- Succesfully implemented admin functionalites 
+- Learnt about Logging
+- Implemented Logback and  SLF4J logging framework
+- Started on work on the documentation of the project
+
+**13-03-2025**
+- Working on documentation
+- Created ER diagram and workflow diagram
